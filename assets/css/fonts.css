@@ -14,12 +14,12 @@
     font-family: 'Raluka';
     font-weight: normal;
     font-style: normal;
-    src: url('RalukaRegular.eot');
-    src: url('RalukaRegular.eot?#iefix') format('embedded-opentype'),
-        url('RalukaRegular.woff2') format('woff2'),
-        url('RalukaRegular.woff') format('woff'),
-        url('RalukaRegular.ttf') format('truetype'),
-        url('RalukaRegular.svg') format('svg');
+    src: url('../fonts/RalukaRegular.eot');
+    src: url('../fonts/RalukaRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RalukaRegular.woff2') format('woff2'),
+        url('../fonts/RalukaRegular.woff') format('woff'),
+        url('../fonts/RalukaRegular.ttf') format('truetype'),
+        url('../fonts/RalukaRegular.svg') format('svg');
     font-display: swap;
 }
 
