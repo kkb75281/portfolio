@@ -11,7 +11,7 @@
     position: relative; */
     background: url(../img/main_bg.svg);
     width: 100%;
-    height: 1600px;
+    height: 100vh;
     position: absolute;
     top: 0;
     background-size: 100% 1600px;
