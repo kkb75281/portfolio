@@ -104,8 +104,13 @@ body {
     font-weight: 500;
 }
 
-.recia {
+.raluka {
     font-family: 'Raluka';
+    font-weight: 400;
+}
+
+.pop {
+    font-family: 'Poppins';
     font-weight: 400;
 }
 
