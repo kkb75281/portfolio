@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="yellow">
+    <main id="main" class="main cafe24">
+        <div class="wrap">
+            <div class="box" 
+                data-0="width: 600px; height: 750px;" 
+                data-600="width:2000px; height: 1000px;" >
+                <h1 class="raluka"
+                    data-0="font-size: 50px; left: 50%; top: 2%; transform: translate(-50%, 0); color: #000;" 
+                    data-600="font-size: 200px; left: 50%; top: 50%; transform: translate(-50%, -50%); color: #fecf67;">
+                    port
+                </h1>
+                <div class="img"
+                    data-0="opacity: 1; scale: 1;" 
+                    data-600="opacity: 0; scale: 0;">
+                    <img src="./assets/img/me.jpg" alt="증명사진">
+                </div>
+                <p data-0="opacity: 1;" data-600="opacity: 0;">
+                    본 사이트는 저의 열정이 담긴 사이트입니다.<br>
+                    즐겁게 감상해주세요!
+                </p>
+            </div>
+            <div class="site"
+                data-0="opacity: 0;" 
+                data-600="opacity: 0;"
+                data-800="opacity: 1;">
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">메인</a></li>
+                        <li><a href="/">사이트 작업</a></li>
+                        <li><a href="/">스크립트 작업</a></li>
+                        <li><a href="/">연락처</a></li>
+                    </ul>
+                </div>
+                <div class="tit">
+                    <div class="stit">SITE</div>
+                    <div class="btit"><span class="t1">creative</span><span class="t2"> site</span><br><span class="t3">focused</span><br><span class="t4">on</span><span class="t5"> convenient</span></div>
+                </div>
+                <p class="desc">사이트 작업을 보여드리겠습니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        const s = skrollr.init();
+
+        function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+    </script>
+</body>
+
+</html>

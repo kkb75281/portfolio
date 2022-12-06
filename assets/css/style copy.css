@@ -1,0 +1,139 @@
+#main {
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    /* width: 100%;
+    background-image: url(../img/main_bg.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    position: relative; */
+    background: url(../img/main_bg.svg);
+    width: 100%;
+    height: 1600px;
+    position: absolute;
+    top: 0;
+    background-size: 100% 1600px;
+    left: 0;
+    /* animation: displace 60s linear infinite; */
+}
+
+@keyframes displace {
+    from {
+        background-position: center 0;
+    }
+
+    to {
+        background-position: center -1600px
+    }
+}
+
+/* box */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 750px;
+    padding: 10px 0;
+    border: 1px solid #000;
+    background-color: #ffbb00;
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 0;
+
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.box h1 {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 50px;
+}
+.box .img {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+.box .img::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 470px;
+    height: 102%;
+    border: 1px solid #000;
+    border-radius: 300px;
+    z-index: 999;
+}
+.box .img img {
+    width: 450px;
+    border-radius: 300px;
+    border: 1px double #000;
+    /* border-style: double; */
+    /* border-collapse: separate; */
+    /* border-spacing: 10px; */
+    /* border-width: 10px; */
+}
+
+/* site */
+.site {
+    width: 100%;
+    height: 100%;
+    background-color: #ffbb00;
+    box-sizing: border-box;
+    padding: 30px;
+}
+.site .menu {
+    /* display: inline-block; */
+}
+.site .menu ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+.site .menu ul li a {
+    font-size: 18px;
+}
+.site .tit {
+    text-align: center;
+}
+.site .stit {
+    display: inline-block;
+    margin: 100px 0;
+    padding: 10px 30px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.site .btit {
+    font-family: 'Poppins';
+    font-size: 150px;
+    line-height: 0.925;
+}
+.site .btit .t1 {
+    font-weight: 400;
+}
+.site .btit .t2 {
+    font-weight: 800;
+}
+.site .btit .t3 {
+    font-weight: 200;
+}
+.site .btit .t4 {
+    font-weight: 300;
+}
+.site .btit .t5 {
+    font-family: 'Raluka';
+}
+.site .desc {
+    right: 0;
+    bottom: 0;
+    font-size: 1.3rem;
+}
