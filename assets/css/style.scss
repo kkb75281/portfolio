@@ -20,22 +20,6 @@
 }
 
 #intro {
-  // background: url(../img/main_bg.svg);
-  // background-size: cover center;
-  // -webkit-animation: displace 60s linear infinite;
-  // animation: displace 60s linear infinite;
-  // z-index: -2;
-
-  // @-webkit-keyframes displace {
-  //   from {
-  //     background-position: center 0;
-  //   }
-
-  //   to {
-  //     background-position: center -1600px;
-  //   }
-  // }
-
   #introInner {
     position: relative;
     width: 100%;
@@ -43,21 +27,21 @@
     overflow: hidden;
     perspective: 2200px;
 
-    background: url(../img/main_bg.svg);
-    background-size: cover center;
-    -webkit-animation: displace 60s linear infinite;
-    animation: displace 60s linear infinite;
-    z-index: -2;
+    // background: url(../img/main_bg.svg);
+    // background-size: cover center;
+    // -webkit-animation: displace 60s linear infinite;
+    // animation: displace 60s linear infinite;
+    // z-index: -2;
 
-    @-webkit-keyframes displace {
-      from {
-        background-position: center 0;
-      }
+    // @-webkit-keyframes displace {
+    //   from {
+    //     background-position: center 0;
+    //   }
 
-      to {
-        background-position: center -1600px;
-      }
-    }
+    //   to {
+    //     background-position: center -1600px;
+    //   }
+    // }
 
     > * {
       transform-origin: 50%;
@@ -67,8 +51,8 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 36rem;
-      height: 50rem;
+      width: 36vw;
+      height: 85vh;
       transform: translate(-50%, -50%);
       border: 1px solid #000;
       background-color: #fb0;
@@ -84,13 +68,13 @@
     }
     .introImg {
       position: absolute;
+      width: 25vw;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
 
       img {
-        width: 25rem;
         border-radius: 300px;
         border: 1px double #000;
       }
@@ -130,13 +114,25 @@
   height: 100%;
   box-sizing: border-box;
   text-align: center;
-  margin-top: 7rem;
+  // margin-top: 7rem;
+  // padding-bottom: 40rem;
 
   .tit {
     position: relative;
     padding: 0 10rem;
 
-    &::before {
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   left: -14rem;
+    //   bottom: -5rem;
+    //   width: 30rem;
+    //   height: 30rem;
+    //   border-radius: 50%;
+    //   background-color: #ffd06a;
+    // }
+
+    .circle {
       position: absolute;
       content: "";
       left: -14rem;
@@ -181,6 +177,9 @@
   }
 
   .project {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     padding: 0 10rem;
     margin-top: 40rem;
 
@@ -290,7 +289,7 @@
 
     .evenProj {
       position: relative;
-      margin: 40rem 0;
+      margin: 20rem 0;
 
       .pnum {
         position: absolute;
@@ -391,17 +390,10 @@
         }
       }
     }
-
-    .Proj6 {
-      margin-bottom: 20rem;
-    }
   }
 }
 
 #script {
-  width: 100%;
-  height: 100%;
-
   .horizontalWrap {
     width: 100%;
     height: 100vh;
@@ -411,6 +403,7 @@
   .horizontalSection {
     overscroll-behavior: none;
     width: 635.5%;
+    // width: 640%;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -684,7 +677,7 @@
   }
 
   .sContact {
-    padding: 5rem 10rem;
+    // padding: 5rem 10rem;
     text-align: center;
     background-color: #fff;
     color: #000;

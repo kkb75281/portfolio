@@ -1,63 +1,666 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/fonts.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/style copy.css">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+        :root {
+            font-family: 'Lato', sans-serif;
+            /*-------------Colors------------- */
+            --ColorDarkA: hsl(0, 0%, 6.472%);
+            /* 1.618*4 */
+            --ColorDarkB: hsl(0, 0%, 3.236%);
+            /* 1.618*2 */
+            --ColorWhiteA: hsl(0, 0%, 93.528%);
+            /* 100-6.472 */
+            --ColorWhiteB: hsl(0, 0%, 90.292%);
+            /* 1.618*6-100  */
+            /*-------------Perfect Fifth (1.500) Base Size 22px------------- */
+            --FontD: 375.89px;
+            --FontH1: 250.59px;
+            --FontH2: 167.06px;
+            --FontH3: 111.38px;
+            --FontH4: 74.25px;
+            --FontH5: 49.50px;
+            --FontParagraph: 33px;
+            --FontSubtitle: 22px;
+            /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+            --GoldenRatio1: 1920px;
+            --GoldenRatio2: 1186.65px;
+            --GoldenRatio3: 733.41px;
+            --GoldenRatio4: 453.28px;
+            --GoldenRatio5: 280.15px;
+            --GoldenRatio6: 173.15px;
+            --GoldenRatio7: 107.01px;
+            --GoldenRatio8: 66.14px;
+            --GoldenRatio9: 40.88px;
+            --GoldenRatio10: 25.27px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: var(--ColorDarkA);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--ColorWhiteA);
+            opacity: 0;
+        }
+
+        #wrapper {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        #wrapper #logo {
+            position: absolute;
+            left: var(--GoldenRatio7);
+            top: var(--GoldenRatio7);
+            -webkit-text-fill-color: transparent;
+        }
+
+        #wrapper #logo h1 {
+            font-size: var(--FontH5);
+            font-weight: 900;
+            background: url(https://icodeayush.github.io/Dora/img/x1.jpg) no-repeat top;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 95%;
+            transition: all 0.31s ease;
+            transform-origin: left;
+        }
+
+        #wrapper #logo h1:hover {
+            transform: scale(1.13);
+            background: url(https://icodeayush.github.io/Dora/img/x1.jpg) no-repeat center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100%;
+        }
+
+        #wrapper #Navbar {
+            display: none;
+        }
+
+        #wrapper nav {
+            position: absolute;
+            right: var(--GoldenRatio7);
+            top: var(--GoldenRatio7);
+            width: var(--GoldenRatio4);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #wrapper nav a {
+            text-decoration: none;
+            font-size: var(--FontSubtitle);
+            font-weight: 400;
+            color: var(--ColorDarkA);
+            transition: transform 0.31s ease;
+            transform-origin: center;
+        }
+
+        #wrapper nav a:hover {
+            transform: scale(1.13);
+        }
+
+        #wrapper nav a span {
+            display: block;
+        }
+
+        #wrapper section {
+            position: absolute;
+            height: 100vh;
+            top: 0;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            text-align: right;
+            right: 50%;
+            cursor: default;
+        }
+
+        #wrapper section h1 {
+            font-size: var(--FontH3);
+            font-weight: 700;
+            color: var(--ColorDarkA);
+            transition: transform 0.31s ease;
+            transform-origin: right bottom;
+        }
+
+        #wrapper section h1:hover {
+            transform: scale(1.13);
+        }
+
+        #wrapper section h1 span {
+            display: block;
+        }
+
+        #wrapper section p {
+            font-size: var(--FontParagraph);
+            font-weight: 400;
+            color: var(--ColorDarkA);
+            transition: transform 0.31s ease;
+            transform-origin: right center;
+        }
+
+        #wrapper section p:hover {
+            transform: scale(1.13);
+        }
+
+        #wrapper section p span {
+            display: block;
+        }
+
+        #wrapper section p:nth-child(3) {
+            transform-origin: right top;
+        }
+
+        #wrapper #d {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            cursor: default;
+        }
+
+        #wrapper #d p {
+            font-size: var(--FontD);
+            font-weight: 900;
+            background: url(https://icodeayush.github.io/Dora/img/x1.jpg) no-repeat center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100%;
+            transition: all 0.31s ease;
+            transform-origin: left;
+        }
+
+        #wrapper #d p:hover {
+            transform: scale(1.13);
+            background: url(https://icodeayush.github.io/Dora/img/x1.jpg) no-repeat top;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 130%;
+        }
+
+        #wrapper #ScrollDown {
+            position: absolute;
+            bottom: var(--GoldenRatio7);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            cursor: default;
+        }
+
+        #wrapper #ScrollDown p {
+            font-size: var(--FontSubtitle);
+            font-weight: 400;
+            color: var(--ColorDarkA);
+        }
+
+        #wrapper #ImageContainer {
+            position: absolute;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+            left: 50%;
+        }
+
+        #wrapper #ImageContainer img {
+            width: var(--GoldenRatio4);
+            margin-left: var(--GoldenRatio7);
+        }
+
+        #wrapper #slide {
+            position: absolute;
+            right: 50%;
+            height: 100vh;
+            margin-right: var(--GoldenRatio9);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-flow: column;
+            cursor: default;
+        }
+
+        #wrapper #slide h1 {
+            font-size: var(--FontH5);
+            font-weight: 700;
+            color: var(--ColorDarkA);
+        }
+
+        #wrapper #slide p {
+            margin-top: var(--GoldenRatio9);
+            width: var(--GoldenRatio3);
+            font-weight: 400;
+            font-size: var(--FontSubtitle);
+            color: var(--ColorDarkA);
+            text-align: right;
+        }
+
+        #codeby {
+            height: var(--GoldenRatio4);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--ColorWhiteB);
+        }
+
+        #codeby a {
+            text-decoration: none;
+            font-size: var(--FontSubtitle);
+            font-weight: 400;
+            color: var(--ColorDarkB);
+        }
+
+        #codeby a span {
+            font-weight: 700;
+            display: inline-block;
+            color: var(--ColorDarkB);
+        }
+
+        /*-------------@media (max-width: 1920px)------------- */
+
+        @media (max-width: 1920px) {
+            :root {
+                --FontD: 19.578vw;
+                --FontH1: 13.052vw;
+                --FontH2: 8.701vw;
+                --FontH3: 5.801vw;
+                --FontH4: 3.867vw;
+                --FontH5: 2.578vw;
+                --FontParagraph: 1.719vw;
+                --FontSubtitle: 1.146vw;
+                /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+                --GoldenRatio1: 100vw;
+                --GoldenRatio2: 61.805vw;
+                --GoldenRatio3: 38.198vw;
+                --GoldenRatio4: 23.608vw;
+                --GoldenRatio5: 14.591vw;
+                --GoldenRatio6: 9.018vw;
+                --GoldenRatio7: 5.573vw;
+                --GoldenRatio8: 3.445vw;
+                --GoldenRatio9: 2.129vw;
+                --GoldenRatio10: 1.316vw;
+            }
+        }
+
+        /*-------------/@media (max-width: 1920px)------------- */
+
+        /*-------------@media (max-width: 400px)------------- */
+
+        @media (max-width: 400px) {
+            :root {
+                /*-------------Perfect Fifth (1.500) (Viewport Width 400px) Base Size 10px------------- */
+                --FontD: 42.715vw;
+                --FontH1: 28.477vw;
+                --FontH2: 18.985vw;
+                --FontH3: 12.658vw;
+                --FontH4: 8.438vw;
+                --FontH5: 5.625vw;
+                --FontParagraph: 3.750vw;
+                --FontSubtitle: 2.500vw;
+                /*-------------GoldenRatio (1.618) (Viewport Width 400px)------------- */
+                --GoldenRatio1: 100vw;
+                --GoldenRatio2: 61.805vw;
+                --GoldenRatio3: 38.197vw;
+                --GoldenRatio4: 23.608vw;
+                --GoldenRatio5: 14.590vw;
+                --GoldenRatio6: 9.018vw;
+                --GoldenRatio7: 5.572vw;
+                --GoldenRatio8: 3.445vw;
+                --GoldenRatio9: 2.130vw;
+                --GoldenRatio10: 1.317vw;
+            }
+
+            #wrapper #Navbar {
+                display: block;
+                position: absolute;
+                right: var(--GoldenRatio7);
+                top: var(--GoldenRatio6);
+                z-index: 3;
+                font-size: var(--FontSubtitle);
+                font-weight: 700;
+                color: var(--ColorDarkA);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #wrapper nav {
+                top: var(--GoldenRatio5);
+                flex-flow: column;
+                z-index: 3;
+                border-radius: 6.18%;
+                background: var(--ColorWhiteB);
+            }
+
+            #wrapper nav.DisplayNone {
+                pointer-events: none;
+            }
+
+            #wrapper nav a {
+                height: var(--GoldenRatio7);
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-self: center;
+            }
+
+            #wrapper #ImageContainer {
+                position: unset;
+                height: auto;
+                width: 100vw;
+                padding-top: var(--GoldenRatio5);
+            }
+
+            #wrapper #ImageContainer img {
+                width: var(--GoldenRatio2);
+                margin: auto;
+            }
+
+            #wrapper #slide {
+                position: unset;
+                height: auto;
+                margin: var(--GoldenRatio5) auto;
+                align-items: flex-start;
+                width: var(--GoldenRatio2);
+            }
+
+            #wrapper #slide p {
+                margin-top: var(--GoldenRatio9);
+                width: var(--GoldenRatio2);
+                text-align: left;
+            }
+
+            #codeby {
+                height: var(--GoldenRatio2);
+            }
+        }
+
+        /*-------------/@media (max-width: 400px)------------- */
+    </style>
 </head>
 
-<body class="yellow">
-    <main id="main" class="main cafe24">
-        <div class="wrap">
-            <div class="box">
-                <h1 class="raluka">
-                    port
-                </h1>
-                <div class="img">
-                    <img src="./assets/img/me.jpg" alt="증명사진">
-                </div>
-                <p>
-                    본 사이트는 저의 열정이 담긴 사이트입니다.<br>
-                    즐겁게 감상해주세요!
-                </p>
-            </div>
-            <div class="site">
-                <div class="menu">
-                    <ul>
-                        <li><a href="/">메인</a></li>
-                        <li><a href="/">사이트 작업</a></li>
-                        <li><a href="/">스크립트 작업</a></li>
-                        <li><a href="/">연락처</a></li>
-                    </ul>
-                </div>
-                <div class="tit">
-                    <div class="stit">SITE</div>
-                    <div class="btit"><span class="t1">creative</span><span class="t2"> site</span><br><span
-                            class="t3">focused</span><br><span class="t4">on</span><span class="t5"> convenient</span>
-                    </div>
-                </div>
-                <p class="desc">사이트 작업을 보여드리겠습니다.</p>
-            </div>
+<body>
+    <!----------------------------------------------------LandingPage--------------------------------------------------->
+    <div id="wrapper" class="landingPage">
+
+
+        <!------------logo------------>
+        <a id="logo" href="#wrapper">
+            <h1>Dora</h1>
+        </a>
+        <!------------/logo------------>
+
+        <!------------Nav------------>
+        <a id="Navbar">Menu</a>
+
+        <nav class="DisplayNone">
+            <a href="#Studio"><span>Studio</span></a>
+            <a href="#About"><span>About</span></a>
+            <a href="#Works"><span>Works</span></a>
+            <a href="#codeby"><span>Contact</span></a>
+        </nav>
+        <!------------/Nav------------>
+
+        <!------------Intro------------>
+        <section>
+            <h1><span>Dora</span></h1>
+            <p><span>Better living, Unique design</span></p>
+            <p><span>Since 1992</span></p>
+        </section>
+        <!------------/Intro------------>
+
+        <!------------D------------>
+        <div id="d">
+            <p>D</p>
         </div>
-    </main>
+        <!------------/D------------>
 
-    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+        <!------------ScrollDown------------>
+        <div id="ScrollDown">
+            <p>ScrollDown</p>
+        </div>
+        <!------------/ScrollDown------------>
+
+    </div>
+    <!----------------------------------------------------/LandingPage--------------------------------------------------->
+
+    <!----------------------------------------------------Slide1--------------------------------------------------->
+    <div id="wrapper" class="slide1">
+        <div id="ImageContainer">
+            <img src="https://icodeayush.github.io/Dora/img/ModernLiving.jpg" alt="ModernLiving">
+        </div>
+        <div id="slide">
+            <h1>Modern Living</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur enim in, perspiciatis sunt expedita
+                consectetur! Repellat delectus fugit, laboriosam qui deleniti iure.</p>
+        </div>
+    </div>
+    <!----------------------------------------------------/Slide1--------------------------------------------------->
+
+    <!----------------------------------------------------Slide2--------------------------------------------------->
+    <div id="wrapper" class="slide2">
+        <div id="ImageContainer">
+            <img src="https://icodeayush.github.io/Dora/img/CoffeeTable.jpg" alt="CoffeeTable">
+        </div>
+        <div id="slide">
+            <h1>Coffee Table</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum perspiciatis veritatis reprehenderit,
+                officiis
+                incidunt itaque facilis placeat sint dignissimos accusantium tenetur repellendus.</p>
+        </div>
+    </div>
+    <!----------------------------------------------------/Slide2--------------------------------------------------->
+
+    <!----------------------------------------------------Slide3--------------------------------------------------->
+    <div id="wrapper" class="slide3">
+        <div id="ImageContainer">
+            <img src="https://icodeayush.github.io/Dora/img/BedroomInterior.jpg" alt="BedroomInterior">
+        </div>
+        <div id="slide">
+            <h1>Bedroom Interior</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores deleniti quo odit dolorum laudantium aut
+                magnam impedit. Placeat magni at culpa ex.</p>
+        </div>
+    </div>
+    <!----------------------------------------------------/Slide3--------------------------------------------------->
+
+    <!----------------------------------------------------CodeBy--------------------------------------------------->
+    <div id="codeby">
+        <a target="_blank" href="https://icodeayush.github.io/">Code By <span>iCodeAyush</span></a>
+    </div>
+    <!----------------------------------------------------/CodeBy--------------------------------------------------->
+
+    <!-- gsap-latest-beta.min.js -->
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
+    <!-- ScrollTrigger.min.js -->
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script>
     <script>
-        const s = skrollr.init();
+        gsap.registerPlugin(ScrollTrigger);
 
-        function scroll() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+        //---------------------Landing Page ScrollTrigger---------------------
+        function LandingPageScrollTrigger() {
 
-            requestAnimationFrame(scroll);
+            gsap.to('body', { // LoadingAnimation---------------------
+                opacity: 1, duration: 0,
+            }) // /LoadingAnimation---------------------
+
+            let LandingPageScrollTrigger = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".landingPage",
+                    toggleActions: "restart restart restart restart",
+                    start: "0% 100%",
+                    end: "50% 0%",
+                    // markers: "true",
+                }
+            })
+            LandingPageScrollTrigger
+                .from('.landingPage #logo', {
+                    opacity: 0, x: "-31%", duration: 2.2, ease: "sine.in",
+                }, 0)
+                .from('#wrapper #Navbar', {
+                    opacity: 0, x: "40%", duration: 2.2, ease: "sine.in",
+                }, 0)
+                .from('.landingPage nav span', {
+                    opacity: 0, x: "70%", duration: 2.2, stagger: 0.4, ease: "sine.inOut",
+                }, 0.2)
+                .from('.landingPage section h1 span', {
+                    opacity: 0, x: "-22%", duration: 2.2, ease: "sine.inOut",
+                }, 0.4)
+                .from('.landingPage #d', {
+                    opacity: 0, x: "22%", duration: 2.2, ease: "sine.inOut",
+                }, 0.4)
+                .from('.landingPage section p span', {
+                    opacity: 0, x: "-31%", duration: 2.2, stagger: 0.4, ease: "sine",
+                }, 0.8)
+                .from('.landingPage #ScrollDown p', {
+                    opacity: 0, y: "-61.8%", duration: 2.2, ease: "sine",
+                }, 1.6)
+
+            let landingPageOnScroll = gsap.timeline({ // landingPageOnScroll---------------------
+                scrollTrigger: {
+                    trigger: ".landingPage",
+                    start: "100% 100%",
+                    end: "100% 0%",
+                    // markers: "true",
+                    scrub: 2.2,
+                }
+            })
+            landingPageOnScroll
+                .to('.landingPage', {
+                    opacity: 0, y: "-31%",
+                }) // landingPageOnScroll---------------------
         }
-        scroll();
+        //---------------------/Landing Page ScrollTrigger---------------------
+
+        //---------------------Slider ScrollTrigger---------------------
+        function SliderScrollTrigger() {
+
+            let Slide1 = gsap.timeline({ // Slide1---------------------
+                scrollTrigger: {
+                    trigger: ".slide1",
+                    start: "100% 100%",
+                    end: "300% 0%",
+                    // markers: "true",
+                    scrub: 2.2,
+                    pin: ".slide1",
+                }
+            })
+            Slide1
+                .from('.slide1 #slide h1', {
+                    opacity: 0, x: "-22%",
+                })
+                .from('.slide1 #slide p', {
+                    opacity: 0, y: "22%",
+                })
+                .from('.slide1 #ImageContainer', {
+                    opacity: 0, y: "22%",
+                }) // Slide1---------------------
+
+            let Slide2 = gsap.timeline({ // Slide2---------------------
+                scrollTrigger: {
+                    trigger: ".slide2",
+                    start: "100% 100%",
+                    end: "300% 0%",
+                    // markers: "true",
+                    scrub: 2.2,
+                    pin: ".slide2",
+                }
+            })
+            Slide2
+                .from('.slide2 #slide h1', {
+                    opacity: 0, x: "-22%",
+                })
+                .from('.slide2 #slide p', {
+                    opacity: 0, y: "22%",
+                })
+                .from('.slide2 #ImageContainer', {
+                    opacity: 0, y: "22%",
+                }) // Slide2---------------------
+
+            let Slide3 = gsap.timeline({ // Slide3---------------------
+                scrollTrigger: {
+                    trigger: ".slide3",
+                    start: "100% 100%",
+                    end: "300% 0%",
+                    // markers: "true",
+                    scrub: 2.2,
+                    pin: ".slide3",
+                }
+            })
+            Slide3
+                .from('.slide3 #slide h1', {
+                    opacity: 0, x: "-22%",
+                })
+                .from('.slide3 #slide p', {
+                    opacity: 0, y: "22%",
+                })
+                .from('.slide3 #ImageContainer', {
+                    opacity: 0, y: "22%",
+                }) // Slide3---------------------
+
+            let iCodeAyush = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#codeby",
+                    toggleActions: "restart restart restart restart",
+                    start: "48.618% 100%",
+                    end: "100% 0%",
+                    // markers: "true",
+                }
+            })
+            iCodeAyush
+                .from('#codeby a', {
+                    opacity: 0, y: "130%", duration: 2.2, ease: "sine",
+                }) // iCodeAyush---------------------
+        }
+        //---------------------/Slider ScrollTrigger---------------------
+
+        /*-------------Navbar (max-width: 400px)------------- */
+        function Navbar() {
+            gsap.from('#wrapper #Navbar', {
+                opacity: 0, x: "40%", duration: 2.2, ease: "sine.in",
+            })
+            var NavAni = gsap.timeline();
+            NavAni.from('#wrapper nav', {
+                opacity: 0, y: "13%", duration: 0.5, ease: "sine",
+            })
+                .reverse();
+            $("#wrapper #Navbar").click(function () {
+                $("#wrapper nav").toggleClass("DisplayNone");
+                NavAni.reversed(!NavAni.reversed());
+            });
+        }
+        /*-------------/Navbar (max-width: 400px)------------- */
+
+        window.onload = () => {
+            LandingPageScrollTrigger()
+            SliderScrollTrigger()
+            if (window.matchMedia("(max-width: 400px)").matches) {
+                Navbar()
+            } else {
+            }
+        }
     </script>
 </body>
 
