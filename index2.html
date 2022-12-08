@@ -32,8 +32,7 @@
     <!-- skip -->
 
     <header id="header" class="header">
-        <div class="menu" data-0="display: none; opacity: 0;" data-600="display: block; opacity: 0;"
-            data-800="display: block; opacity: 1;">
+        <div class="menu">
             <ul>
                 <li><a href="#intro">MAIN</a></li>
                 <li><a href="#site">SITE</a></li>
@@ -48,9 +47,6 @@
         <div class="wrap">
             <section id="intro" class="intro">
                 <div id="introInner">
-                    <!-- <div class="introBg">
-                        <img src="./assets/img/main.jpg" alt="인트로배경이미지">
-                    </div> -->
                     <span class="introBox"></span>
                     <h1 class="introTit raluka">
                         port
@@ -78,13 +74,24 @@
                         <div class="sdesc">
                             <p>지금까지 작업했던 사이트를<br>보여드리겠습니다.</p>
                         </div>
-                        <div class="circle"></div>
+                        <div class="icon1">
+                            <img src="./assets/img/bgIcon1.png" alt="배경아이콘1">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="site" class="site">
                 <div class="project">
+                    <div class="icon2">
+                        <img src="./assets/img/bgIcon2.png" alt="배경아이콘2">
+                    </div>
+                    <div class="icon3">
+                        <img src="./assets/img/bgIcon3.png" alt="배경아이콘3">
+                    </div>
+                    <div class="icon4">
+                        <img src="./assets/img/bgIcon4.png" alt="배경아이콘4">
+                    </div>
                     <div class="oddProj Proj1">
                         <h2 class="pnum raluka">01</h2>
                         <div class="pcont">
@@ -104,7 +111,7 @@
                             </div>
                             <div class="right">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site1.jpg" alt="사이트1">
                                     </div>
@@ -120,7 +127,7 @@
                         <div class="pcont">
                             <div class="left">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site2.jpg" alt="사이트2">
                                     </div>
@@ -164,7 +171,7 @@
                             </div>
                             <div class="right">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site3.jpg" alt="사이트3">
                                     </div>
@@ -180,7 +187,7 @@
                         <div class="pcont">
                             <div class="left">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site4.jpg" alt="사이트4">
                                     </div>
@@ -224,7 +231,7 @@
                             </div>
                             <div class="right">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site5.jpg" alt="사이트5">
                                     </div>
@@ -240,7 +247,7 @@
                         <div class="pcont">
                             <div class="left">
                                 <div class="preview">
-                                    <!-- <img src="./assets/img/Mockup.svg" alt="모니터목업이미지"> -->
+                                    <img class="moc" src="./assets/img/Mockup.svg" alt="모니터목업이미지">
                                     <div class="site">
                                         <img src="./assets/img/site6.jpg" alt="사이트6">
                                     </div>
@@ -482,7 +489,7 @@
             })
 
             Site
-                .from('.siteIntroTit .circle', { x: -10, scale: 0, }, 0)
+                .from('.siteIntroTit .icon1', { x: -10, scale: 0, zIndex: '-9', }, 0)
                 .from('.siteIntroTit .tit .stit', { y: -200, opacity: 0, }, 0)
                 .from('.siteIntroTit .tit .btit', { y: 200, opacity: 0, }, 0)
                 .from('.siteIntroTit .tit .sdesc', { x: 200, opacity: 0, }, 0)
@@ -493,7 +500,7 @@
             scrollTrigger: {
                 trigger: ".Proj1",
                 scrub: true,
-            }, y: 50, x: -100
+            }, y: 50, x: -80
         })
 
         gsap.to('.Proj1 .pcont', {
@@ -507,7 +514,7 @@
             scrollTrigger: {
                 trigger: ".Proj2",
                 scrub: true,
-            }, y: 50, x: 100
+            }, y: 50, x: 80
         })
 
         gsap.to('.Proj2 .pcont', {
@@ -517,11 +524,18 @@
             }, y: -100
         })
 
+        gsap.to('.project .icon2', {
+            scrollTrigger: {
+                trigger: ".Proj3",
+                scrub: true,
+            }, scale: 0.7, rotate: '30deg', y: -100
+        })
+
         gsap.to('.Proj3 .pnum', {
             scrollTrigger: {
                 trigger: ".Proj3",
                 scrub: true,
-            }, y: 50, x: -100
+            }, y: 50, x: -80
         })
 
         gsap.to('.Proj3 .pcont', {
@@ -531,11 +545,20 @@
             }, y: -100
         })
 
+        gsap.to('.project .icon3', {
+            scrollTrigger: {
+                trigger: ".Proj4",
+                scrub: true,
+                // ease: "Bounce.easeOut",
+                // yoyo: true,
+            }, x: -300, scale: 2
+        })
+
         gsap.to('.Proj4 .pnum', {
             scrollTrigger: {
                 trigger: ".Proj4",
                 scrub: true,
-            }, y: 50, x: 100
+            }, y: 50, x: 80
         })
 
         gsap.to('.Proj4 .pcont', {
@@ -549,7 +572,7 @@
             scrollTrigger: {
                 trigger: ".Proj5",
                 scrub: true,
-            }, y: 50, x: -100
+            }, y: 50, x: -80
         })
 
         gsap.to('.Proj5 .pcont', {
@@ -563,7 +586,7 @@
             scrollTrigger: {
                 trigger: ".Proj6",
                 scrub: true,
-            }, y: 50, x: 100
+            }, y: 50, x: 80
         })
 
         gsap.to('.Proj6 .pcont', {
