@@ -416,7 +416,7 @@
   .horizontalSection {
     -ms-scroll-chaining: none;
     overscroll-behavior: none;
-    width: 510%;
+    width: 500%;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -776,6 +776,7 @@
     }
     .contact {
       position: absolute;
+      // width: 100%;
       left: 50%;
       bottom: 10%;
       transform: translateX(-50%);

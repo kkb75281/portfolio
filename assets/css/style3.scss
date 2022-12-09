@@ -417,7 +417,7 @@
   .horizontalSection {
     -ms-scroll-chaining: none;
     overscroll-behavior: none;
-    width: 510%;
+    width: 310%;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -427,47 +427,45 @@
     height: 100vh;
     // padding: 0 3vw;
 
-    > div {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+    // > div {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   left: 50%;
+    //   top: 50%;
+    //   transform: translate(-50%, -50%);
+    // }
   }
 
   .sTitle {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   left: -14vw;
-    //   bottom: -5vw;
-    //   width: 30vw;
-    //   height: 30vh;
-    //   border-radius: 50%;
-    //   background-color: #ffd06a;
-    // }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     .stit {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
       display: inline-block;
-      margin-bottom: 5vw;
       padding: 1vw 2vw;
       border: 1px solid #000;
       border-radius: 50%;
       font-size: 1.1vw;
     }
     .btit {
+      position: absolute;
       width: 100%;
+      top: 55%;
+      left: 50%;
+      // transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       font-family: "Poppins";
       font-size: 8.5vw;
       line-height: 0.925;
-      margin-bottom: 3vw;
+      text-align: center;
 
       .t1 {
         font-weight: 400;
@@ -491,15 +489,22 @@
   }
 
   .sProject {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    left: 150%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // display: flex;
+    // flex-wrap: nowrap;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
 
     .bgTit {
       position: absolute;
       content: "";
+      // width: 100%;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -507,10 +512,17 @@
       color: #fecf67;
       z-index: -1;
       display: flex;
+
+      span {
+        padding: 0 15vw;
+      }
     }
 
     .proj {
-      height: 90vh;
+      width: 100%;
+      height: 100vh;
+      padding: 5vw 0;
+      box-sizing: border-box;
       display: flex;
       // justify-content: center;
       justify-content: space-around;
@@ -754,6 +766,13 @@
   }
 
   .sContact {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 250%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
     text-align: center;
     background-color: #fff;
     color: #000;

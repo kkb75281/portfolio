@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/style3.min.css">
+    <link rel="stylesheet" href="./assets/css/style5.min.css">
 </head>
 
 <body class="yellow">
@@ -289,11 +289,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="bgTxt">
+                                <h3 class="bgTxt1">script</h3>
+                                <h3 class="bgTxt1">script</h3>
+                                <h3 class="bgTxt1">script</h3>
+                            </div>
                             <div class="hScript">
                                 <div class="sProject">
-                                    <h1 class="bgTit raluka">
-                                        <span>script</span><span>effect</span><span>css</span>
-                                    </h1>
+                                    <!-- <h1 class="bgTit raluka">script</h1> -->
                                     <ul class="proj">
                                         <li class="p1">
                                             <span class="num pop">1</span>
@@ -327,6 +330,15 @@
                                             </div>
                                             <img class="shape" src="./assets/img/shape04.svg" alt="모양4">
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hScript">
+                                <div class="sProject">
+                                    <h1 class="bgTit raluka">
+                                        effect
+                                    </h1>
+                                    <ul class="proj">
                                         <li class="p5">
                                             <span class="num pop">5</span>
                                             <div class="text">
@@ -359,6 +371,15 @@
                                             </div>
                                             <img class="shape" src="./assets/img/shape08.svg" alt="모양8">
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hScript">
+                                <div class="sProject">
+                                    <h1 class="bgTit raluka">
+                                        css
+                                    </h1>
+                                    <ul class="proj">
                                         <li class="p9">
                                             <span class="num pop">9</span>
                                             <div class="text">
@@ -402,7 +423,7 @@
                                         <br><span class="t4">my</span><span class="t5"> portfolio</span>
                                     </div>
                                     <div class="contact pop">
-                                        <img class="img" src="./assets/img/contact_me.svg" alt="증명사진2">
+                                        <img class="img" src="./assets/img/contact_me.jpg" alt="증명사진2">
                                         <h4 class="name">Kwon kyu bi</h4>
                                         <div class="info">
                                             <span class="copy">GYUPP © 2022PORTFOLIO</span>
@@ -442,18 +463,6 @@
 
         requestAnimationFrame(raf);
 
-        // icon rotate 효과
-        // window.addEventListener("scroll", function (event) {
-        //     let scroll = this.scrollY;
-        //     document.querySelector(".scr1").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr2").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr3").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr4").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr5").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr6").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        // });
-
-
         // 이미지 확대
         function Intro() {
 
@@ -468,7 +477,6 @@
             })
 
             Intro
-                // .to('#introInner .introBg', { y: -200, opacity: 0, zIndex: '-9' }, 0)
                 .to('#introInner .introDesc', { scale: 0, opacity: 0, }, 0)
                 .to('#introInner .introImg', { scale: 0, opacity: 0, }, 0)
                 .to('#introInner .introTit', { left: '50%', top: '50%', transform: 'translate(-50%, -50%)', fontSize: '30rem', color: '#fecf67', zIndex: '-1' }, 0)
@@ -610,34 +618,22 @@
         })
 
         // 가로모드
-        gsap.registerPlugin(ScrollTrigger);
-
         const sections = gsap.utils.toArray(".hScript"); // 다중이 == querySelectorAll
 
         gsap.to(sections, {
-            xPercent: -400,
+            xPercent: -100 * (sections.length - 1),
             ease: "none",
             scrollTrigger: {
                 trigger: ".horizontalWrap",
-                pin: true,
-                scrub: 1,
-                end: "+=4000", //speed
-                // snap: 1 / (sections.length - 1), // scroll 살짝만 해도 알아서 sectionn영역으로 움직임
                 markers: true,
+                pin: true,
+                scrub: true,
+                end: "+=5000", //speed
+                // snap: 1 / (sections.length - 1), // scroll 살짝만 해도 알아서 sectionn영역으로 움직임
             },
         });
-        gsap.registerPlugin(ScrollTrigger);
 
-        // const card1 = document.querySelector(".sProject .p1");
-        // const iframe1 = document.querySelector(".sProject .p1 .iframe");
-        // const close1 = document.querySelector(".sProject .p1 .iframe .close");
 
-        // card1.addEventListener("click", () => {
-        //     iframe1.style.display = "block";
-        // })
-        // close1.addEventListener("click", () => {
-        //     iframe1.style.display = "none";
-        // })
 
     </script>
 </body>
