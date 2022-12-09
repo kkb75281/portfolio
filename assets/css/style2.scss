@@ -452,8 +452,9 @@
     .btit {
       position: absolute;
       width: 100%;
-      top: 50%;
+      top: 55%;
       left: 50%;
+      // transform: translateX(-50%);
       transform: translate(-50%, -50%);
       font-family: "Poppins";
       font-size: 8.5vw;
