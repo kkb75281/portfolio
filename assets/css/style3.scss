@@ -124,16 +124,17 @@
 
       .stit {
         display: inline-block;
-        margin: 100px 0;
-        padding: 10px 30px;
+        margin: 7vw 0 5vw 0;
+        padding: 1vw 2vw;
         border: 1px solid #000;
+        font-size: 1.1vw;
         border-radius: 50%;
       }
       .btit {
         font-family: "Poppins";
-        font-size: 150px;
+        font-size: 8.5vw;
         line-height: 0.925;
-        margin-bottom: 3vw;
+        margin-bottom: 5vw;
 
         .t1 {
           font-weight: 400;
@@ -416,7 +417,7 @@
   .horizontalSection {
     -ms-scroll-chaining: none;
     overscroll-behavior: none;
-    width: 500%;
+    width: 510%;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -425,10 +426,22 @@
     width: 100%;
     height: 100vh;
     // padding: 0 3vw;
+
+    > div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .sTitle {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
 
     // &::before {
@@ -443,14 +456,16 @@
     // }
     .stit {
       display: inline-block;
-      margin: 100px 0;
-      padding: 10px 30px;
+      margin-bottom: 5vw;
+      padding: 1vw 2vw;
       border: 1px solid #000;
       border-radius: 50%;
+      font-size: 1.1vw;
     }
     .btit {
+      width: 100%;
       font-family: "Poppins";
-      font-size: 150px;
+      font-size: 8.5vw;
       line-height: 0.925;
       margin-bottom: 3vw;
 
@@ -491,208 +506,260 @@
       font-size: 30vw;
       color: #fecf67;
       z-index: -1;
+      display: flex;
     }
 
     .proj {
+      height: 90vh;
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin: 0 2vw;
-      cursor: pointer;
+      // justify-content: center;
+      justify-content: space-around;
+      align-items: baseline;
+      flex-direction: row;
 
-      .num {
-        width: 27px;
-        font-size: 20px;
-        padding-top: 3px;
-        background-color: #000;
-        color: #ffbb00;
-        border-radius: 50%;
-        margin: 0 auto;
-        margin-bottom: 20px;
-        margin-top: -50px;
-      }
-      .tit {
-        width: 100%;
-        font-size: 70px;
-        line-height: 0.925;
-        margin-bottom: 20px;
-      }
-      .desc {
-        width: 100%;
-      }
-      .iframe {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
+      > li {
+        position: relative;
+        // width: 24%;
 
-        .close {
-          position: absolute;
-          content: "";
-          left: 50%;
-          top: 5%;
-          width: 20px;
-          height: 20px;
-          transform: translate(-50%, -50%);
-          color: #fff;
-          z-index: 100;
-        }
-      }
-    }
-    .p1 {
-      width: 500px;
-      height: 400px;
-      background: url(../img/shape01.png);
-      background-repeat: no-repeat;
-      background-size: 500px;
-
-      .proj__inner {
-        rotate: -8.5deg;
-      }
-    }
-    .p2 {
-      margin-top: -20vw;
-      width: 500px;
-      height: 400px;
-      background: url(../img/shape02.png);
-      background-repeat: no-repeat;
-      background-size: 500px;
-
-      .proj__inner {
-        rotate: 6deg;
-        padding-right: 5vw;
-      }
-    }
-    .p3 {
-      margin-bottom: -20vw;
-      width: 350px;
-      height: 500px;
-      background: url(../img/shape03.png);
-      background-repeat: no-repeat;
-      background-size: 350px;
-
-      .proj__inner {
-        rotate: 23deg;
-      }
-    }
-    .p4 {
-      margin-top: -20vw;
-      width: 400px;
-      height: 400px;
-      background: url(../img/shape04.png);
-      background-repeat: no-repeat;
-      background-size: 400px;
-
-      .proj__inner {
-        rotate: 6deg;
-      }
-    }
-    .p5 {
-      margin-bottom: -20vw;
-      width: 500px;
-      height: 400px;
-      background: url(../img/shape05.png);
-      background-repeat: no-repeat;
-      background-size: 500px;
-
-      .proj__inner {
-        rotate: -11deg;
-      }
-    }
-    .p6 {
-      width: 410px;
-      height: 400px;
-      background: url(../img/shape06.png);
-      background-repeat: no-repeat;
-      background-size: 380px;
-
-      .proj__inner {
-        rotate: -10deg;
-      }
-    }
-    .p7 {
-      margin-bottom: -30vw;
-      width: 500px;
-      height: 360px;
-      background: url(../img/shape07.png);
-      background-repeat: no-repeat;
-      background-size: 500px;
-    }
-    .p8 {
-      margin-top: -10vw;
-      width: 400px;
-      height: 360px;
-      background: url(../img/shape08.png);
-      background-repeat: no-repeat;
-      background-size: 400px;
-
-      .proj__inner {
-        rotate: 7.93deg;
-      }
-    }
-    .p9 {
-      margin-bottom: -30vw;
-      // margin-: 20vw;
-      width: 450px;
-      height: 400px;
-      background: url(../img/shape09.png);
-      background-repeat: no-repeat;
-      background-size: 450px;
-
-      .proj__inner {
-        rotate: -7.2deg;
-      }
-    }
-    .p10 {
-      margin-top: -15vw;
-      width: 450px;
-      height: 380px;
-      background: url(../img/shape10.png);
-      background-repeat: no-repeat;
-      background-size: 450px;
-
-      .proj__inner {
         .num {
-          margin-right: 6vw;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          display: inline-block;
+          width: 1.7vw;
+          height: 1.7vw;
+          border-radius: 50%;
+          background-color: #000;
+          font-size: 1vw;
+          color: #ffbb00;
+          line-height: 1.7vw;
+          text-align: center;
+        }
+
+        .text {
+          position: absolute;
+          width: 80%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+
+          .tit {
+            width: 100%;
+            font-size: 4vw;
+            line-height: 0.925;
+            margin-bottom: 1vw;
+          }
+          .desc {
+            font-size: 1vw;
+            width: 100%;
+            word-break: keep-all;
+            line-height: 1.4;
+          }
         }
       }
-    }
-    .p11 {
-      margin-bottom: -10vw;
-      width: 550px;
-      height: 390px;
-      background: url(../img/shape11.png);
-      background-repeat: no-repeat;
-      background-size: 490px;
 
-      .proj__inner {
-        rotate: 11deg;
+      .p1 {
+        width: 30%;
+        align-self: center;
+        rotate: -8.5deg;
+
+        .num {
+          top: 10%;
+        }
+        .text {
+          top: 27%;
+        }
       }
-    }
-    .p12 {
-      margin-top: -10vw;
-      width: 470px;
-      height: 400px;
-      background: url(../img/shape12.png);
-      background-repeat: no-repeat;
-      background-size: 440px;
+      .p2 {
+        width: 30%;
+        align-self: flex-start;
+        rotate: 6.5deg;
 
-      .proj__inner {
+        .num {
+          top: 7%;
+        }
+        .text {
+          top: 22%;
+          width: 55%;
+          padding-right: 4vw;
+          .tit {
+            padding-left: 1.5vw;
+          }
+        }
+      }
+      .p3 {
+        width: 22%;
+        align-self: flex-end;
+        rotate: 10deg;
+
+        .num {
+          top: 15%;
+        }
+        .text {
+          width: 70%;
+          top: 30%;
+
+          .tit {
+            margin-bottom: 1.5vw;
+          }
+        }
+      }
+      .p4 {
+        width: 24%;
+        align-self: center;
+        rotate: 3deg;
+        padding-bottom: 15vw;
+
+        .num {
+          top: 7%;
+        }
+        .text {
+          top: 15%;
+        }
+      }
+      .p5 {
+        width: 30%;
+        align-self: flex-end;
         rotate: -11deg;
+
+        .num {
+          top: 9%;
+        }
+        .text {
+          width: 65%;
+          top: 20%;
+        }
+      }
+      .p6 {
+        width: 22%;
+        align-self: center;
+        rotate: -10deg;
+
+        .num {
+          top: 8%;
+        }
+        .text {
+          top: 20%;
+
+          .desc {
+            width: 43%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .p7 {
+        width: 28%;
+        align-self: flex-end;
+        rotate: 3deg;
+
+        .num {
+          top: 8%;
+        }
+        .text {
+          top: 23%;
+
+          .desc {
+            width: 43%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .p8 {
+        padding-top: 5vw;
+        width: 24%;
+        align-self: flex-start;
+        rotate: 8deg;
+
+        .num {
+          top: 30%;
+        }
+        .text {
+          top: 40%;
+
+          .desc {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .p9 {
+        width: 27%;
+        align-self: center;
+        rotate: -7deg;
+
+        .num {
+          top: 15%;
+        }
+        .text {
+          top: 30%;
+
+          .desc {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .p10 {
+        padding-top: 5vw;
+        width: 28%;
+        align-self: flex-start;
+
+        .num {
+          top: 30%;
+          margin-left: 4vw;
+        }
+        .text {
+          top: 40%;
+
+          .desc {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+      .p11 {
+        padding-top: 8vw;
+        width: 27%;
+        align-self: center;
+        rotate: 11deg;
+
+        .num {
+          margin-left: 1vw;
+          top: 37%;
+        }
+        .text {
+          padding-left: 1vw;
+          width: 75%;
+          top: 47%;
+        }
+      }
+      .p12 {
+        width: 35%;
+        align-self: flex-end;
+        rotate: -11deg;
+
+        .num {
+          top: 20%;
+        }
+        .text {
+          top: 30%;
+
+          .desc {
+            width: 69%;
+            margin: 0 auto;
+          }
+        }
       }
     }
   }
 
   .sContact {
-    padding: 5vw 10vw;
     text-align: center;
     background-color: #fff;
     color: #000;
 
     .stit {
+      padding-top: 5vw;
       font-size: 4vw;
       margin-bottom: 5vw;
     }
@@ -720,15 +787,15 @@
     .contact {
       position: absolute;
       left: 50%;
-      bottom: 0;
-      transform: translate(-50%, -50%);
+      bottom: 10%;
+      transform: translateX(-50%);
       z-index: -9999;
       font-weight: 400;
       font-size: 1.1vw;
 
       .img {
-        width: 400px;
-        height: 400px;
+        width: 40vw;
+        height: 40vh;
         margin-top: -5vw;
         margin-bottom: 1vw;
       }
