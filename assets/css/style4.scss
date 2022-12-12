@@ -132,7 +132,7 @@
       }
       .btit {
         font-family: "Poppins";
-        font-size: 8.5vw;
+        font-size: 7.5vw;
         line-height: 0.925;
         margin-bottom: 5vw;
 
@@ -153,10 +153,8 @@
         }
       }
       .sdesc {
-        text-align: right;
-        position: absolute;
-        right: 10vw;
-        font-size: 1.1rem;
+        text-align: center;
+        font-size: 1.1vw;
       }
     }
   }
@@ -597,6 +595,7 @@
           }
           .sdesc {
             text-align: center;
+            font-size: 1.1vw;
           }
         }
       }

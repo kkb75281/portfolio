@@ -114,6 +114,11 @@ body {
     font-weight: 400;
 }
 
+.pp {
+    font-family: 'PP Eiko';
+    font-weight: 500;
+}
+
 
 /* 배경 */
 .yellow {
