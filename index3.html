@@ -461,15 +461,15 @@
         requestAnimationFrame(raf);
 
         // icon rotate 효과
-        // window.addEventListener("scroll", function (event) {
-        //     let scroll = this.scrollY;
-        //     document.querySelector(".scr1").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr2").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr3").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr4").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr5").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        //     document.querySelector(".scr6").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        // });
+        window.addEventListener("scroll", function (event) {
+            let scroll = this.scrollY;
+            document.querySelector(".scr1 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr2 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr3 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr4 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr5 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr6 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+        });
 
 
         // 이미지 확대
@@ -518,12 +518,12 @@
         }
         Site()
 
-        gsap.to('.scroll img', {
-            scrollTrigger: {
-                trigger: ".project",
-                scrub: true,
-            }, rotation: 360
-        })
+        // gsap.to('.scroll img', {
+        //     scrollTrigger: {
+        //         trigger: ".project",
+        //         scrub: true,
+        //     }, rotation: 360
+        // })
 
         // gsap.fromTo('.scroll img', 0.5, { scale: 1 }, { scale: 1.05, repeat: 3, repeatDelay: 0, yoyo: true, transformOrigin: 'center center' });
 
