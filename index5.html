@@ -524,17 +524,22 @@
         });
     </script>
     <script>
-        const scrollsite = document.querySelectorAll(".scroll");
+        const scrollsite = document.querySelector(".hover");
         const presite = document.querySelectorAll(".presite");
 
+        // const img = new Image()
+        // img.src = "./assets/img/site1.jpg"
+        // console.log(img.height)
+
         const TL = gsap.timeline({ paused: true });
+        // const imgHeight = gsap.getProperty(".presite","height")
 
         TL.to(presite, {
             scale: 1.0,
-            duration: 0.6,
+            duration: 8,
             stagger: 0.1,
-            ease: "back.out(1.7)",
-            y: 500
+            // ease: "back.out(1.7)",
+            y: -1360
         });
 
         scrollsite.addEventListener("mouseenter", () => {
