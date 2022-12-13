@@ -107,6 +107,7 @@
                                 <div class="scroll scr1">
                                     <img src="./assets/img/scroll.png" alt="스크롤">
                                 </div>
+                                <!-- <div class="hover"></div> -->
                             </div>
                             <div class="left">
                                 <h4 class="ptit raluka">WEBSTANDARD</h4>
@@ -148,7 +149,7 @@
                                 <h4 class="ptit raluka">PHP SITE</h4>
                                 <div class="pdesc">
                                     PHP를 활용하여 만든 포트폴리오 사이트입니다.<br>
-                                    MYSQL과 데이터베이스를 활용하여 완성하였고,<br>
+                                    MYSQL과 데이터베이스를 활용하여 완성하였고,
                                     로그인, 회원가입 기능 외에도 댓글, 글 작성, 수정이 가능합니다.
                                 </div>
                                 <div class="pgo pop">
@@ -182,8 +183,8 @@
                             <div class="left">
                                 <h4 class="ptit raluka">TEAM PROJECT</h4>
                                 <div class="pdesc">
-                                    전체적인 사이트의 디자인 작업과 마크업을 담당했으며<br>
-                                    PHP와 MYSQL을 활용하여 로그인, 회원가입이 가능하도록 작업하였습니다.<br>
+                                    전체적인 사이트의 디자인 작업과 마크업을 담당했으며
+                                    PHP와 MYSQL을 활용하여 로그인, 회원가입이 가능하도록 작업하였습니다.
                                     또한 지도 api를 활용하여 게시글 작성이 가능하도록 작업하였습니다.
                                 </div>
                                 <div class="pgo pop">
@@ -217,8 +218,8 @@
                             <div class="right">
                                 <h4 class="ptit raluka">REACT SITE 1</h4>
                                 <div class="pdesc">
-                                    터미널을 통해 js 라이브러리를 설치하고<br>
-                                    각각의 컴퍼넌트를 만들어 싱글페이지가 출력되도록 만든 React 사이트 입니다.<br>
+                                    터미널을 통해 js 라이브러리를 설치하고
+                                    각각의 컴퍼넌트를 만들어 싱글페이지가 출력되도록 만든 React 사이트 입니다.
                                     API를 이용하여 데이터를 출력시켰으며 검색기능도 만들어주었습니다.
                                 </div>
                                 <div class="pgo pop">
@@ -250,8 +251,8 @@
                             <div class="left">
                                 <h4 class="ptit raluka">REACT SITE 2</h4>
                                 <div class="pdesc">
-                                    REACT를 활용하여 만든 유튜브 사이트 입니다.<br>
-                                    유튜버, 구독자 수, 최신 영상 등의 정보를 Youtube v3 API를 사용하여 가지고 왔습니다.<br>
+                                    REACT를 활용하여 만든 유튜브 사이트 입니다.
+                                    유튜버, 구독자 수, 최신 영상 등의 정보를 Youtube v3 API를 사용하여 가지고 왔습니다.
                                     계속해서 사이트 업데이트 중에 있습니다.
                                 </div>
                                 <div class="pgo pop">
@@ -284,8 +285,8 @@
                             <div class="right">
                                 <h4 class="ptit raluka">VUE SITE</h4>
                                 <div class="pdesc">
-                                    REACT을 통해 만들었던 사이트 레이아웃을 VUE를 활용하여 만들어보았습니다.<br>
-                                    youtube, movie, unplash 부분은 api를 가져와 postman 사이트를 이용하여 데이터를 분류하고<br>
+                                    REACT을 통해 만들었던 사이트 레이아웃을 VUE를 활용하여 만들어보았습니다.
+                                    youtube, movie, unplash 부분은 api를 가져와 postman 사이트를 이용하여 데이터를 분류하고
                                     그 중 원하는 데이터만 뽑아와 사이트에 나타나도록 작업해주었습니다.
                                 </div>
                                 <div class="pgo pop">
@@ -515,6 +516,27 @@
             document.querySelector(".scr4 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
             document.querySelector(".scr5 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
             document.querySelector(".scr6 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+        });
+    </script>
+    <script>
+        const scrollsite = document.querySelectorAll(".scroll");
+        const presite = document.querySelectorAll(".presite");
+
+        const TL = gsap.timeline({ paused: true });
+
+        TL.to(presite, {
+            scale: 1.0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "back.out(1.7)",
+            y: 500
+        });
+
+        scrollsite.addEventListener("mouseenter", () => {
+            TL.play();
+        });
+        scrollsite.addEventListener("mouseout", () => {
+            TL.reverse();
         });
     </script>
     <script>
