@@ -68,14 +68,17 @@
       position: absolute;
       width: 25vw;
       // height: 40vh;
+      overflow: hidden;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 4;
+      border-radius: 300px;
+      border: 1px double #000;
 
       img {
-        border-radius: 300px;
-        border: 1px double #000;
+        max-width: 100%;
+        height: auto;
       }
     }
     .introDesc {
@@ -214,9 +217,11 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        // flex-direction: column;
 
         .left {
           width: 38%;
+          order: 1;
           text-align: right;
           padding-bottom: 0.8vw;
 
@@ -254,6 +259,7 @@
           }
         }
         .right {
+          order: 2;
           width: 60%;
 
           .preview {
@@ -988,6 +994,7 @@
           flex-wrap: wrap;
 
           .left {
+            order: 2;
             width: 100%;
             text-align: center;
 
@@ -1002,6 +1009,7 @@
             }
           }
           .right {
+            order: 1;
             width: 100%;
             margin-bottom: 5vw;
 
@@ -1388,6 +1396,7 @@
                 width: 100%;
                 word-break: keep-all;
                 line-height: 1.4;
+                display: none;
               }
             }
           }
