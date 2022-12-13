@@ -64,7 +64,7 @@
                 </div>
             </section>
 
-            <section id="siteIntro" class="siteIntro">
+            <section id="siteIntro" class="siteIntro" data-bgcolor="#fb0">
                 <div class="siteIntroTit">
                     <div class="tit">
                         <div class="icon1">
@@ -81,7 +81,7 @@
                 </div>
             </section>
 
-            <section id="site" class="site">
+            <section id="site" class="site" data-bgcolor="#fb0">
                 <div class="project">
                     <div class="icon2">
                         <img src="./assets/img/bgIcon2.png" alt="배경아이콘2">
@@ -302,12 +302,48 @@
                             </div>
                         </div>
                     </div>
+                    <div class="oddProj Proj7">
+                        <h2 class="pnum raluka">07</h2>
+                        <div class="pcont">
+                            <div class="right">
+                                <div class="preview">
+                                    <img class="moc" src="./assets/img/Mockup.png" alt="모니터목업이미지">
+                                    <div class="site">
+                                        <figure>
+                                            <img class="presite" src="./assets/img/site7.jpg" alt="사이트7">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="scroll scr7">
+                                    <img src="./assets/img/scroll.png" alt="스크롤">
+                                </div>
+                            </div>
+                            <div class="left">
+                                <h4 class="ptit raluka">TEAM PROJECT</h4>
+                                <div class="pdesc">
+                                    전체적인 사이트의 디자인 작업과 마크업을 담당했으며
+                                    api를 활용하여 실시간 날씨가 나오도록 작업하였습니다.
+                                </div>
+                                <div class="pgo pop">
+                                    <ul>
+                                        <li><a href="https://main--stalwart-trifle-2ea971.netlify.app/"
+                                                target="_blank">VIEW
+                                                SITE</a>
+                                        </li>
+                                        <li><a href="https://github.com/sabbunsopum/api_team" target="_blank">VIEW
+                                                CODE</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <div class="horizontalMode">
+            <section class="horizontalMode" data-bgcolor="#fb0">
                 <section id="script" class="script">
-                    <div class="hScript title" data-bgcolor="#fb0">
+                    <div class="hScript title">
                         <div class="scriptIntroTit">
                             <div class="tit">
                                 <div class="icon1">
@@ -324,7 +360,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hScript project" data-bgcolor="#fb0">
+                    <div class="hScript project">
                         <div class="bgTxt">
                             <h3 class="raluka">script</h3>
                             <h3 class="raluka">effect</h3>
@@ -465,7 +501,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="hScript contact" data-bgcolor="#fff">
+                    <!-- <div class="hScript contact">
                         <h3 class="stit raluka">port</h3>
                         <div class="btit">
                             <span class="t1">Thank you</span><span class="t2"> for viewing</span><br>
@@ -485,9 +521,31 @@
                                 <span class="top">BACK TO TOP</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </section>
-            </div>
+            </section>
+
+            <section id="contact" class="contact" data-bgcolor="#fff">
+                <h3 class="stit raluka">port</h3>
+                <div class="btit">
+                    <span class="t1">Thank you</span><span class="t2"> for viewing</span><br>
+                    <br><span class="t4">my</span><span class="t5"> portfolio</span>
+                </div>
+                <div class="img">
+                    <img src="./assets/img/contact_me.jpg" alt="증명사진2">
+                </div>
+                <div class="contact pop">
+                    <h4 class="name">Kwon kyu bi</h4>
+                    <div class="info">
+                        <span class="copy">GYUPP © 2022PORTFOLIO</span>
+                        <div>
+                            <p class="phone">+82 10 6226 8394</p>
+                            <p class="email">kkb75281@gmail.com</p>
+                        </div>
+                        <span class="top">BACK TO TOP</span>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </main>
@@ -495,7 +553,7 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script> -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
@@ -521,6 +579,7 @@
             document.querySelector(".scr4 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
             document.querySelector(".scr5 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
             document.querySelector(".scr6 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+            document.querySelector(".scr7 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
         });
     </script>
     <script>
@@ -757,47 +816,24 @@
         // })
     </script>
     <script>
-        // const scriptWrap = document.querySelector(".script")
-        // const cards = document.querySelectorAll(".proj > li");
-        // const card1 = document.querySelectorAll(".proj .p1");
-
-        // cards.addEventListener("mouseover", () => {
-        //     scriptWrap.style.backgroundColor = "black";
-        // })
-
-        // function mouse_over() {
-        //     scriptWrap.style.transition = "all 1s";
-        //     scriptWrap.style.backgroundColor = "black";
-        // }
-        // function mouse_out() {
-        //     scriptWrap.style.transition = "all 1s";
-        //     scriptWrap.style.backgroundColor = "inherit";
-        // }
-
-        window.addEventListener("load", function () {
-            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-            scrollColorElems.forEach((colorSection, i) => {
-                const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
-
-                ScrollTrigger.create({
-                    trigger: colorSection,
-                    markers: true,
-                    scroller: ".site",
-                    start: "left 50%",
-                    onEnter: () =>
-                        gsap.to("horizontalMode", {
-                            backgroundColor: colorSection.dataset.bgcolor,
-                            overwrite: "auto"
-                        }),
-                    onLeaveBack: () =>
-                        gsap.to("horizontalMode", {
-                            backgroundColor: prevBg,
-                            overwrite: "auto"
-                        })
-                });
+        const bgColorElems = document.querySelectorAll("[data-bgcolor]");
+        bgColorElems.forEach((colorSection, i) => {
+            const prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
+            ScrollTrigger.create({
+                trigger: colorSection,
+                start: 'top 50%',
+                end: 'bottom 5%',
+                markers: true,
+                onEnter: () => gsap.to("#main", {
+                    backgroundColor: colorSection.dataset.bgcolor,
+                    // overwrite: "auto"
+                }),
+                onLeaveBack: () => gsap.to("#main", {
+                    backgroundColor: prevBg,
+                    // overwrite: "auto"
+                })
             });
         });
-
     </script>
 </body>
 
