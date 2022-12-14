@@ -1020,10 +1020,13 @@
     margin-bottom: 5vw;
   }
   .btit {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: "Poppins";
     font-size: 4vw;
     line-height: 0.6;
-    margin-bottom: 3vw;
+    // margin-bottom: 3vw;
     z-index: 9999;
     // position: relative;
 
@@ -1046,14 +1049,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 25vw;
-    // z-index: 1;
-    // // padding: 0 10vw;
-    // // margin: 0 auto;
-    // // margin-top: -5vw;
-
-    // img {
-    //   width: 100%;
-    // }
   }
   .contact {
     position: absolute;
@@ -1081,6 +1076,7 @@
       .top {
         position: relative;
         font-weight: 600;
+        cursor: pointer;
 
         &::after {
           background: url(../img/arrow.svg) no-repeat 0px 0px;
