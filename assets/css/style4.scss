@@ -390,34 +390,6 @@
             }
 
             .site {
-              &::after {
-                position: absolute;
-                content: "";
-                border-radius: 50%;
-                left: -1.5vw;
-                bottom: 5.7vw;
-                width: 10vw;
-                height: 10vw;
-                cursor: pointer;
-                z-index: 999999;
-              }
-
-              &:hover .presite {
-                animation: showsite 8s infinite;
-
-                @keyframes showsite {
-                  0% {
-                    transform: translateY(0%);
-                  }
-                  50% {
-                    transform: translateY(-60%);
-                  }
-                  100% {
-                    transform: translateY(0%);
-                  }
-                }
-              }
-
               figure {
                 position: absolute;
                 left: 50%;
@@ -436,7 +408,24 @@
             bottom: 10vw;
             width: 15vw;
             height: 15vh;
+            z-index: 9999;
             cursor: pointer;
+
+            .nohover {
+            }
+
+            .hover {
+              transition: all 0.3s;
+              display: none;
+            }
+
+            .scrollInner:hover .nohover {
+              display: none;
+            }
+
+            .scrollInner:hover .hover {
+              display: block;
+            }
           }
         }
 
@@ -496,22 +485,6 @@
           z-index: 999999;
         }
 
-        &:hover .presitehz {
-          animation: showsiteeven 8s infinite;
-
-          @keyframes showsiteeven {
-            0% {
-              transform: translateX(0%);
-            }
-            50% {
-              transform: translateX(-75%);
-            }
-            100% {
-              transform: translateX(0%);
-            }
-          }
-        }
-
         figure {
           position: absolute;
           left: 0;
@@ -527,58 +500,6 @@
         }
       }
     }
-    .Proj5 {
-      .site {
-        &::after {
-          position: absolute;
-          content: "";
-          // background-color: #fff;
-          border-radius: 50%;
-          right: -1.5vw;
-          bottom: 5.7vw;
-          width: 10vw;
-          height: 10vw;
-          cursor: pointer;
-          z-index: 999999;
-        }
-
-        &:hover .presite {
-          animation: showsite 8s infinite;
-
-          @keyframes showsite {
-            0% {
-              transform: translateY(0%);
-            }
-            50% {
-              transform: translateY(-70%);
-            }
-            100% {
-              transform: translateY(0%);
-            }
-          }
-        }
-
-        figure {
-          position: absolute;
-          left: 50%;
-          top: 4%;
-          transform: translateX(-50%);
-          width: 92%;
-          height: 60%;
-          overflow: hidden;
-          z-index: -1;
-        }
-      }
-    }
-    // .Proj7 {
-    //   .right {
-    //     .site {
-    //       figure {
-    //         z-index: unset;
-    //       }
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -1014,6 +935,10 @@
   position: relative;
 
   .stit {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
     text-align: center;
     padding-top: 2vw;
     font-size: 3.5vw;
@@ -1022,6 +947,7 @@
   .btit {
     position: absolute;
     left: 50%;
+    top: 20%;
     transform: translateX(-50%);
     font-family: "Poppins";
     font-size: 4vw;
