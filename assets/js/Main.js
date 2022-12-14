@@ -43,21 +43,21 @@ s1.to(presite1, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  y: -1950,
+  y: "-82%",
 });
 
 s2.to(presite2, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  y: -620,
+  y: "-60%",
 });
 
 s3.to(presite3, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  y: -1660,
+  y: "-80%",
 });
 
 // s4.to(presite4, {
@@ -71,14 +71,14 @@ s5.to(presite5, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  y: -1220,
+  y: "-75%",
 });
 
 s6.to(presite6, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  x: -1700,
+  x: "-75%",
 });
 
 // s7.to(presite7, {

@@ -48,7 +48,8 @@
       // width: 36vw;
       // height: 85vh;
       width: 35%;
-      height: 90%;
+      height: 85%;
+      // max-height: 50vw;
       transform: translate(-50%, -50%);
       border: 1px solid #000;
       background-color: #fb0;
@@ -59,7 +60,7 @@
       left: 50%;
       // top: 11vh;
       // transform: translateX(-50%);
-      top: 12%;
+      top: 8%;
       transform: translate(-50%, -50%);
       font-size: 3vw;
       z-index: 3;
@@ -83,8 +84,9 @@
     }
     .introDesc {
       position: absolute;
+      width: 100%;
       left: 50%;
-      bottom: 12%;
+      bottom: 5%;
       transform: translateX(-50%);
       // transform: translate(-50%, -50%);
       text-align: center;
@@ -1016,6 +1018,68 @@
 }
 
 @media (max-width: 680px) {
+  #intro {
+    #introInner {
+      .introBox {
+        width: 40%;
+        height: 40%;
+      }
+      .introTit {
+        position: absolute;
+        left: 50%;
+        // top: 11vh;
+        // transform: translateX(-50%);
+        top: 8%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        z-index: 3;
+      }
+      .introImg {
+        position: absolute;
+        width: 25vw;
+        // height: 40vh;
+        overflow: hidden;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        border-radius: 300px;
+        border: 1px double #000;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .introDesc {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        // transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 1.4;
+        font-size: 1.1vw;
+        z-index: 5;
+      }
+      #introMade {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vw;
+        font-weight: 300;
+        z-index: 6;
+
+        span {
+          font-weight: 700;
+          display: inline-block;
+        }
+      }
+    }
+  }
   #site {
     .project {
       .oddProj {
@@ -1027,6 +1091,12 @@
             order: 2;
             width: 100%;
             text-align: center;
+
+            .pdesc {
+              width: 60%;
+              margin: 0 auto;
+              margin-bottom: 1vw;
+            }
           }
           .right {
             order: 1;
@@ -1141,105 +1211,11 @@
             text-align: center;
             padding-bottom: 0.8vw;
 
-            .ptit {
-              font-size: 2.1vw;
-              margin-bottom: 1vw;
-            }
             .pdesc {
-              font-size: 1.1vw;
-              line-height: 1.4;
+              width: 60%;
+              margin: 0 auto;
               margin-bottom: 1vw;
             }
-          }
-        }
-      }
-
-      // .Proj4,
-      .Proj6 {
-        .site {
-          &::after {
-            position: absolute;
-            content: "";
-            border-radius: 50%;
-            left: -1.5vw;
-            bottom: 5.7vw;
-            width: 40vw;
-            height: 70vw;
-            cursor: pointer;
-            z-index: 999999;
-          }
-
-          &:hover .presitehz {
-            animation: showsiteeven 8s infinite;
-
-            @keyframes showsiteeven {
-              0% {
-                transform: translateX(0%);
-              }
-              50% {
-                transform: translateX(-75%);
-              }
-              100% {
-                transform: translateX(0%);
-              }
-            }
-          }
-
-          figure {
-            position: absolute;
-            left: 0;
-            top: 4%;
-            width: 25%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-
-            img {
-              width: 400%;
-            }
-          }
-        }
-      }
-      .Proj5 {
-        .site {
-          &::after {
-            position: absolute;
-            content: "";
-            // background-color: #fff;
-            border-radius: 50%;
-            right: -1.5vw;
-            bottom: 5.7vw;
-            width: 10vw;
-            height: 10vw;
-            cursor: pointer;
-            z-index: 999999;
-          }
-
-          &:hover .presite {
-            animation: showsite 8s infinite;
-
-            @keyframes showsite {
-              0% {
-                transform: translateY(0%);
-              }
-              50% {
-                transform: translateY(-70%);
-              }
-              100% {
-                transform: translateY(0%);
-              }
-            }
-          }
-
-          figure {
-            position: absolute;
-            left: 50%;
-            top: 4%;
-            transform: translateX(-50%);
-            width: 92%;
-            height: 60%;
-            overflow: hidden;
-            z-index: -1;
           }
         }
       }
