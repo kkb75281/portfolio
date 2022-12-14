@@ -470,7 +470,7 @@
       }
     }
 
-    .Proj4,
+    // .Proj4,
     .Proj6 {
       .site {
         &::after {
@@ -1090,38 +1090,38 @@
               }
 
               .site {
-                &::after {
-                  position: absolute;
-                  content: "";
-                  border-radius: 50%;
-                  left: -1.5vw;
-                  bottom: 17vw;
-                  width: 10vw;
-                  height: 10vw;
-                  cursor: pointer;
-                  z-index: 999999;
-                }
+                // &::after {
+                //   position: absolute;
+                //   content: "";
+                //   border-radius: 50%;
+                //   left: -1.5vw;
+                //   bottom: 17vw;
+                //   width: 10vw;
+                //   height: 10vw;
+                //   cursor: pointer;
+                //   z-index: 999999;
+                // }
 
-                .presite {
-                  transition: all 3s;
-                }
+                // .presite {
+                //   transition: all 3s;
+                // }
 
-                &:hover .presite {
-                  animation: showsite 8s infinite;
-                  transition: all 3s;
+                // &:hover .presite {
+                //   animation: showsite 8s infinite;
+                //   transition: all 3s;
 
-                  @keyframes showsite {
-                    0% {
-                      transform: translateY(0%);
-                    }
-                    50% {
-                      transform: translateY(-60%);
-                    }
-                    100% {
-                      transform: translateY(0%);
-                    }
-                  }
-                }
+                //   @keyframes showsite {
+                //     0% {
+                //       transform: translateY(0%);
+                //     }
+                //     50% {
+                //       transform: translateY(-60%);
+                //     }
+                //     100% {
+                //       transform: translateY(0%);
+                //     }
+                //   }
+                // }
 
                 // &:not(:hover) .presite {
                 //   transition: all 3s;
@@ -1156,7 +1156,7 @@
         }
       }
 
-      .Proj4,
+      // .Proj4,
       .Proj6 {
         .site {
           &::after {
