@@ -43,7 +43,7 @@ function Site() {
       end: "100% 0%",
       pin: ".siteIntroTit",
       scrub: 2.2,
-      markers: true,
+      // markers: true,
     },
   });
 

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/style4.min.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
 </head>
 
 <body class="yellow">
@@ -614,7 +614,7 @@
                 scrub: 1,
                 end: "+=4000", //speed
                 // snap: 1 / (sections.length - 1), // scroll 살짝만 해도 알아서 sectionn영역으로 움직임
-                markers: true,
+                // markers: true,
             },
 
 
@@ -669,7 +669,7 @@
                 trigger: colorSection,
                 start: 'top 50%',
                 end: 'bottom 5%',
-                markers: true,
+                // markers: true,
                 onEnter: () => gsap.to("#main", {
                     backgroundColor: colorSection.dataset.bgcolor,
                     // overwrite: "auto"
