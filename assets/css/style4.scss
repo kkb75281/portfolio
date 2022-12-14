@@ -1041,18 +1041,19 @@
     }
   }
   .img {
-    // position: absolute;
-    // left: 50%;
-    // bottom: 0;
-    // transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 25vw;
-    // padding: 0 10vw;
-    margin: 0 auto;
-    margin-top: -5vw;
+    // z-index: 1;
+    // // padding: 0 10vw;
+    // // margin: 0 auto;
+    // // margin-top: -5vw;
 
-    img {
-      width: 100%;
-    }
+    // img {
+    //   width: 100%;
+    // }
   }
   .contact {
     position: absolute;
