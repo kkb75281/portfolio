@@ -78,7 +78,7 @@ s6.to(presite6, {
   scale: 1.0,
   duration: 8,
   stagger: 0.1,
-  x: -2230,
+  x: -1700,
 });
 
 // s7.to(presite7, {
