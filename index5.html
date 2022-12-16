@@ -778,12 +778,12 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/Main.js"></script>
-    <script src="./assets/js/Section.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="./assets/js/Loading.js"></script>
+    <script src="./assets/js/Main.js"></script>
+    <script src="./assets/js/Section.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
@@ -799,18 +799,6 @@
         }
 
         requestAnimationFrame(raf);
-
-        // icon rotate 효과
-        window.addEventListener("scroll", function (event) {
-            let scroll = this.scrollY;
-            document.querySelector(".scr1 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            document.querySelector(".scr2 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            document.querySelector(".scr3 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            document.querySelector(".scr4 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            document.querySelector(".scr5 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            document.querySelector(".scr6 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-            // document.querySelector(".scr7 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
-        });
     </script>
     <script>
         ScrollTrigger.matchMedia({
@@ -942,26 +930,6 @@
         //         }
         //     }
         // }
-    </script>
-    <script>
-        const bgColorElems = document.querySelectorAll("[data-bgcolor]");
-        bgColorElems.forEach((colorSection, i) => {
-            const prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
-            ScrollTrigger.create({
-                trigger: colorSection,
-                start: 'top 50%',
-                end: 'bottom 5%',
-                // markers: true,
-                onEnter: () => gsap.to("#main", {
-                    backgroundColor: colorSection.dataset.bgcolor,
-                    // overwrite: "auto"
-                }),
-                onLeaveBack: () => gsap.to("#main", {
-                    backgroundColor: prevBg,
-                    // overwrite: "auto"
-                })
-            });
-        });
     </script>
 </body>
 

@@ -15,6 +15,24 @@ document.querySelector(".top").addEventListener("click", () => {
   window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
 });
 
+// icon rotate 효과
+window.addEventListener("scroll", function (event) {
+  let scroll = this.scrollY;
+  document.querySelector(".scr1 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  document.querySelector(".scr2 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  document.querySelector(".scr3 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  document.querySelector(".scr4 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  document.querySelector(".scr5 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  document.querySelector(".scr6 img").style.transform =
+    "rotate(-" + scroll / 8 + "deg)";
+  // document.querySelector(".scr7 img").style.transform = "rotate(-" + scroll / 8 + "deg)";
+});
+
 // 스크롤 오버했을때
 const hover1 = document.querySelector(".h1");
 const hover2 = document.querySelector(".h2");
@@ -123,4 +141,26 @@ hover6.addEventListener("mouseenter", () => {
 });
 hover6.addEventListener("mouseout", () => {
   s6.reverse();
+});
+
+// 배경색 전환
+const bgColorElems = document.querySelectorAll("[data-bgcolor]");
+bgColorElems.forEach((colorSection, i) => {
+  const prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
+  ScrollTrigger.create({
+    trigger: colorSection,
+    start: "top 50%",
+    end: "bottom 5%",
+    // markers: true,
+    onEnter: () =>
+      gsap.to("#main", {
+        backgroundColor: colorSection.dataset.bgcolor,
+        // overwrite: "auto"
+      }),
+    onLeaveBack: () =>
+      gsap.to("#main", {
+        backgroundColor: prevBg,
+        // overwrite: "auto"
+      }),
+  });
 });
