@@ -145,13 +145,20 @@ hover6.addEventListener("mouseout", () => {
 
 // 배경색 전환
 const bgColorElems = document.querySelectorAll("[data-bgcolor]");
+console.log(bgColorElems);
 bgColorElems.forEach((colorSection, i) => {
-  const prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
+  console.log(colorSection);
+  console.log(i);
+  // const prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
+  let prevBg = i === 0 ? "" : bgColorElems[i - 1].dataset.bgcolor;
+  if (i === 4) {
+    bgColorElems[i].dataset.bgcolor = "#ffffff";
+  }
   ScrollTrigger.create({
     trigger: colorSection,
     start: "top 50%",
     end: "bottom 5%",
-    // markers: true,
+    markers: true,
     onEnter: () =>
       gsap.to("#main", {
         backgroundColor: colorSection.dataset.bgcolor,

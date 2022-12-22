@@ -80,7 +80,7 @@
                 </div>
             </section>
 
-            <section id="siteIntro" class="siteIntro" data-bgcolor="#fb0">
+            <section id="siteIntro" class="siteIntro" data-bgcolor="#ffbb00">
                 <div class="siteIntroTit">
                     <div class="tit">
                         <div class="icon1">
@@ -97,7 +97,7 @@
                 </div>
             </section>
 
-            <section id="site" class="site" data-bgcolor="#fb0">
+            <section id="site" class="site" data-bgcolor="#ffbb00">
                 <div class="project">
                     <div class="icon2">
                         <img src="./assets/img/bgIcon2.png" alt="배경아이콘2">
@@ -251,8 +251,7 @@
                                 </div>
                                 <div class="pgo pop">
                                     <ul>
-                                        <li><a href="https://main--stalwart-trifle-2ea971.netlify.app/"
-                                                target="_blank">VIEW
+                                        <li><a href="https://owatd.netlify.app/" target="_blank">VIEW
                                                 SITE</a>
                                         </li>
                                         <li><a href="https://github.com/sabbunsopum/api_team" target="_blank">VIEW
@@ -414,7 +413,7 @@
                 </div>
             </section>
 
-            <section class="horizontalMode" data-bgcolor="#fb0">
+            <section id="horizontalMode" class="horizontalMode" data-bgcolor="#ffbb00">
                 <section id="script" class="script">
                     <div class="hScript title">
                         <div class="scriptIntroTit">
@@ -577,7 +576,7 @@
                 </section>
             </section>
 
-            <section class="verticalMode" data-bgcolor="#fb0">
+            <section id="verticalMode" class="verticalMode" data-bgcolor="#ffbb00">
                 <section id="javascript" class="javascript">
                     <div class="title">
                         <div class="scriptIntroTit">
@@ -748,7 +747,7 @@
                 </section>
             </section>
 
-            <section id="contact" class="contact" data-bgcolor="#fff">
+            <section id="contact" class="contact" data-bgcolor="#ffbb00">
                 <h3 class="stit raluka">port</h3>
                 <div class="btit">
                     <span class="t1">Thank you</span><span class="t2"> for viewing</span><br>
@@ -785,8 +784,6 @@
     <script src="./assets/js/Main.js"></script>
     <script src="./assets/js/Section.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
-
         // smooth 효과
         const lenis = new Lenis({
             duration: 3,
@@ -801,6 +798,8 @@
         requestAnimationFrame(raf);
     </script>
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+
         ScrollTrigger.matchMedia({
 
             // desktop
