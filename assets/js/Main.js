@@ -158,7 +158,7 @@ bgColorElems.forEach((colorSection, i) => {
     trigger: colorSection,
     start: "top 50%",
     end: "bottom 5%",
-    markers: true,
+    // markers: true,
     onEnter: () =>
       gsap.to("#main", {
         backgroundColor: colorSection.dataset.bgcolor,
